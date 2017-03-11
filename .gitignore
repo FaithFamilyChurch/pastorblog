@@ -8,6 +8,7 @@ db/*.sqlite*
 .*.swp
 .*.swo
 .DS_Store
+passenger.*.pid.lock
 installer/rails_installer.yml
 /public/files
 /public/images/theme
