@@ -1,11 +1,11 @@
 source 'https://rubygems.org'
 
 if ENV['HEROKU']
-  ruby '2.1.5'
+#  ruby '2.1.5'
 
-  gem 'pg'
-  gem 'rails_12factor'
-  gem 'thin' # Change this to another web server if you want (ie. unicorn, passenger, puma...)
+#  gem 'pg'
+#  gem 'rails_12factor'
+#  gem 'thin' # Change this to another web server if you want (ie. unicorn, passenger, puma...)
 else
 
   require 'yaml'
@@ -36,8 +36,7 @@ else
   end
 end
 
-gem 'rails', '~> 5.0.1'
-
+gem 'rails', '~> 5.0.2'
 gem 'passenger'
 
 # Store sessions in the database
@@ -58,9 +57,9 @@ gem 'non-stupid-digest-assets', '~> 1.0'
 gem 'rake', '~> 12.0'
 
 # On Ruby 2.4.0, xmlrpc needs to be included as a gem
-gem 'xmlrpc', '~> 0.3.0', platform: :mri_24
+gem 'xmlrpc', '~> 0.3.0' #, platform: :mri_24
 # Avoid loading multiple copies of openssl on Ruby 2.4.0
-gem 'openssl', '~> 2.0.3', platform: :mri_24
+gem 'openssl', '~> 2.0.3' #, platform: :mri_24
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
