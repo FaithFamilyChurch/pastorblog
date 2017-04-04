@@ -7,20 +7,23 @@ require 'rails/all'
 Bundler.require(*Rails.groups)
 
 module Publify
-  class Application < Rails::Application
-    # Settings in config/environments/* take precedence over those specified here.
-    # Application configuration should go into files in config/initializers
-    # -- all .rb files in that directory are automatically loaded.
+    class Application < Rails::Application
+        # Settings in config/environments/* take precedence over those specified here.
+        # Application configuration should go into files in config/initializers
+        # -- all .rb files in that directory are automatically loaded.
 
-    config.plugins = [ :all ]
+        config.relative_url_root = "/blog"
+        config.action_controller.relative_url_root = "/blog"
 
-    # To avoid exception when deploying on Heroku
-    config.assets.initialize_on_precompile = false
+        config.plugins = [ :all ]
 
-    config.to_prepare do
-      DeviseController.layout 'accounts'
+        # To avoid exception when deploying on Heroku
+        config.assets.initialize_on_precompile = false
+
+        config.to_prepare do
+            DeviseController.layout 'accounts'
+        end
     end
-  end
 
   # Load included libraries.
   require 'publify_sidebar'
