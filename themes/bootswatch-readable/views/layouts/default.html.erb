@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<%#= This little regex is all about stripping out the | character if theres nothing after it!  %>
+<% if /(\w+('\w+)?)(\s\w+('\w+)?)*\s+\|\s+$/.match(page_title) %>
+    <% page_title.gsub!(/\s+\|\s+/, '') %>
+<% end %>
+
 <head profile="http://gmpg.org/xfn/11">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><%= h(page_title) %></title>
@@ -10,7 +16,7 @@
   <nav class="navbar navbar-default" role="navigation">
     <div class="container">
       <div class='navbar-header'>
-        <%= link_to(content_tag(:span, '', class: 'glyphicon glyphicon-th'), this_blog.base_url, class: 'navbar-brand' )%>
+        <%= link_to(content_tag(:span, '', class: 'glyphicon glyphicon-home'), this_blog.base_url, class: 'navbar-brand' )%>
       </div>
       <ul class='nav navbar-nav pull-right'>
         <li><%= link_to(t('.statuses'), {controller: 'notes'}) %></li>
@@ -47,6 +53,5 @@
       <div class='span7'></div>
     </div>
   </div>
-  <p style='text-align: center'><small>Powered by <a href='http://publify.co'>Publify</a> | Photo <a href='http://startupstockphotos.com/'>Startup stock photos</a></small></p>
 </body>
 </html>
