@@ -9,35 +9,40 @@
 <head profile="http://gmpg.org/xfn/11">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><%= h(page_title) %></title>
-  <%= stylesheet_link_tag "/stylesheets/theme/bootstrap.css", "/stylesheets/theme/style.css", "user-styles.css", :media => 'all' %>
+  <%= stylesheet_link_tag "/stylesheets/theme/bootstrap.css", :media => 'all' %>
+  <%= stylesheet_link_tag "/stylesheets/theme/fusionlib.css", :media => 'all' %>
+  <%= stylesheet_link_tag "/stylesheets/theme/fonts.css", :media => 'all' %>
+  <%= stylesheet_link_tag "/stylesheets/theme/style.css", "/stylesheets/theme/style_readable.css", "user-styles.css", :media => 'all' %>
   <%= render 'shared/page_header' %>
 </head>
 <body>
+    <%= render 'shared/nav' %>
+    <!--
   <nav class="navbar navbar-default" role="navigation">
     <div class="container">
       <div class='navbar-header'>
-        <%= link_to(content_tag(:span, '', class: 'glyphicon glyphicon-home'), this_blog.base_url, class: 'navbar-brand' )%>
+        <%#= link_to(content_tag(:span, '', class: 'glyphicon glyphicon-home'), this_blog.base_url, class: 'navbar-brand' )%>
       </div>
       <ul class='nav navbar-nav pull-right'>
-        <li><%= link_to(t('.statuses'), {controller: 'notes'}) %></li>
-        <li><%= link_to(t('.archives'), {controller: 'articles', action: 'archives'}) %></li>
-        <%- Page.published.each do |page| %>
-        <li><%= link_to_permalink(page, page.title) %></li>
-        <%- end %>
+        <li><%#= link_to(t('.statuses'), {controller: 'notes'}) %></li>
+        <li><%#= link_to(t('.archives'), {controller: 'articles', action: 'archives'}) %></li>
+        <%#- Page.published.each do |page| %>
+        <li><%#= link_to_permalink(page, page.title) %></li>
+        <%#- end %>
       </ul>
     </div>
   </nav>
-
-  <div id='logo' class='container'>
+    -->
+  <!--<div id='logo' class='container'>
     <div class='row'>
       <div class='col-lg-12 vertical-container'>
         <div class='vertical'>
-          <h1><%= link_to(this_blog.blog_name, this_blog.base_url) %></h1>
-          <p class='subtitle'><%= this_blog.blog_subtitle %></p>
+          <h1><%#= link_to(this_blog.blog_name, this_blog.base_url) %></h1>
+          <p class='subtitle'><%#= this_blog.blog_subtitle %></p>
         </div>
       </div>
     </div>
-  </div>
+  </div>-->
   <div class='container' id='page'>
     <div class='col-sm-8'>
       <%= yield %>
@@ -52,6 +57,7 @@
       <div class='span1'></div>
       <div class='span7'></div>
     </div>
+    <%= render 'shared/footer' %>
   </div>
 </body>
 </html>
