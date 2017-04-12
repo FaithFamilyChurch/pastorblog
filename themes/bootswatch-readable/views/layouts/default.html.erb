@@ -16,7 +16,6 @@
   <%= render 'shared/page_header' %>
 </head>
 <body>
-    <%= render 'shared/nav' %>
     <!--
   <nav class="navbar navbar-default" role="navigation">
     <div class="container">
@@ -44,6 +43,7 @@
     </div>
   </div>-->
   <div class='container' id='page'>
+    <%= render 'shared/nav' %>
     <div class='col-sm-8'>
       <%= yield %>
     </div>
