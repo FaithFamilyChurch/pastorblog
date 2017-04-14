@@ -7,32 +7,33 @@
 <% end %>
 
 <head profile="http://gmpg.org/xfn/11">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><%= h(page_title) %></title>
-  <%= stylesheet_link_tag "/stylesheets/theme/bootstrap.css", :media => 'all' %>
-  <%= stylesheet_link_tag "/stylesheets/theme/fusionlib.css", :media => 'all' %>
-  <%= stylesheet_link_tag "/stylesheets/theme/fonts.css", :media => 'all' %>
-  <%= stylesheet_link_tag "/stylesheets/theme/style.css", "/stylesheets/theme/style_readable.css", "user-styles.css", :media => 'all' %>
-  <%= render 'shared/page_header' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= h(page_title) %></title>
+    <%= stylesheet_link_tag "/stylesheets/theme/bootstrap.css", :media => 'all' %>
+    <%= stylesheet_link_tag "/stylesheets/theme/fusionlib.css", :media => 'all' %>
+    <%= stylesheet_link_tag "/stylesheets/theme/fonts.css", :media => 'all' %>
+    <%= stylesheet_link_tag "/stylesheets/theme/style.css", :media => 'all' %>
+    <%= stylesheet_link_tag "/stylesheets/theme/style_readable.css", :media => 'all' %>
+    <%= stylesheet_link_tag "user-styles.css", :media => 'all' %>
+    <%= render 'shared/page_header' %>
 </head>
 <body>
+    <div class='container' id='page'>
+        <%= render 'shared/nav' %>
+        <div class='col-sm-8'>
+            <%= yield %>
+        </div>
+        <div class='col-sm-3 col-sm-offset-1' id='sidebar'>
+            <%= render_sidebars %>
+        </div>
+    </div>
 
-  <div class='container' id='page'>
-    <%= render 'shared/nav' %>
-    <div class='col-sm-8'>
-      <%= yield %>
+    <div id='page' class='container'>
+        <div class='row'>
+            <div class='span1'></div>
+            <div class='span7'></div>
+        </div>
+        <%= render 'shared/footer' %>
     </div>
-    <div class='col-sm-3 col-sm-offset-1' id='sidebar'>
-      <%= render_sidebars %>
-    </div>
-  </div>
-
-  <div id='page' class='container'>
-    <div class='row'>
-      <div class='span1'></div>
-      <div class='span7'></div>
-    </div>
-    <%= render 'shared/footer' %>
-  </div>
 </body>
 </html>
