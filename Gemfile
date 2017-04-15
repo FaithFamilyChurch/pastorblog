@@ -38,6 +38,7 @@ end
 
 gem 'rails', '~> 5.0.2'
 gem 'passenger'
+gem 'twitter'
 
 # Store sessions in the database
 gem 'activerecord-session_store', '~> 1.0.0'

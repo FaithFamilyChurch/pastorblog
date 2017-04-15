@@ -1,0 +1,29 @@
+
+<!--<h3 class="sidebar-title"></h3>-->
+<div class="sidebar-body">
+	<%# @client.user_timeline("worshiptogether").first(5).each do |tweet| %>
+		<div class="tweetdiv">
+			<div class="tweetheader">
+				<img class="tweeticon" src="<%#= tweet.user.profile_image_url %>" />
+				<div class="tweetnamewrapper">
+					<span class="tweetusername">
+						<a href="<%#= tweet.user.url %>" target="_blank"><%#= tweet.user.name %></a>
+					</span>
+					<span class="tweetscreenname">@<%#= tweet.user.screen_name %></span>
+				</div>
+			</div>
+			<div class="tweettext">
+				<%# @tweet = @tweetbld.get_tweet(tweet) %>
+				<%# if @tweet['images'].length > 0 %>
+					<%# @tweet['images'].each do |img| %>
+						<%#= img.html_safe %>
+					<%# end %>
+				<%# end %>
+				<div class="tweetheader bubble">
+					<span class="bubble_date"><%#= tweet.created_at.strftime("%b %d, %l:%M%P") %></span>
+					<%#= @tweet['maintext'].html_safe %>
+				</div>
+			</div>
+		</div>
+	<%# end %>
+</div>
