@@ -1,9 +1,9 @@
 
-<h3 class="sidebar-title"><%= sidebar.title %></h3>
 <% sidebar.tweetbuilder %>
 <% @tweetbld = sidebar.get_tweetbuilder %>
 <% @tclient = sidebar.client %>
 
+<h3 class="sidebar-title"><%= sidebar.title %></h3>
 <div class="sidebar-body">
 	<% @tclient.user_timeline(sidebar.twitter_user).first(sidebar.tweet_count.to_i).each do |tweet| %>
 		<div class="tweetdiv">
