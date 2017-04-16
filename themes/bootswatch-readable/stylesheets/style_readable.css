@@ -58,7 +58,7 @@ blockquote {
   padding-bottom: 20px;
 }
 
-#page img {
+/*#page img {
     background: #ddd;
     border: 1px solid #DDDDDD;
     border-radius: 6px;
@@ -67,7 +67,7 @@ blockquote {
     display: block;
     max-width: 100%;
     height: auto;
-}
+}*/
 
 .status {
   margin-top: 30px;
