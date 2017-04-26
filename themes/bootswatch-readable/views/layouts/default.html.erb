@@ -18,13 +18,16 @@
     <%= render 'shared/page_header' %>
 </head>
 <body>
+    <div class="bg-blog-1"></div>
     <div class='container' id='page'>
         <%= render 'shared/nav' %>
+        <div class="articlewrapper">
         <div class='col-sm-8'>
             <%= yield %>
         </div>
         <div class='col-sm-3 col-sm-offset-1' id='sidebar'>
             <%= render_sidebars %>
+        </div>
         </div>
     </div>
 
@@ -33,7 +36,7 @@
             <div class='span1'></div>
             <div class='span7'></div>
         </div>
-        <%= render 'shared/footer' %>
     </div>
+    <%= render 'shared/footer' %>
 </body>
 </html>
