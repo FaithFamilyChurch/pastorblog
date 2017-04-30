@@ -14,11 +14,60 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 p {
-    font-size:17px !important;
+    float:left;
 }
 
 blockquote {
     border-left: 5px solid #671012 !important;
+    float:left;
+}
+
+a[rel="tag"], .taglinks {
+    display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: 14px;
+    color: #ffffff;
+    line-height: 1;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-align: center;
+    background-color:#918b80;
+    border-radius: 3px;
+    margin-left:3px;
+}
+
+.taglinks > a {
+    color:#fff;
+}
+
+.article {
+    float:left;
+}
+
+.article > p:first-child:first-letter {
+    color: #483D3F;
+    float: left;
+    font-size: 70px;
+    line-height: 70px;
+    padding-right: 15px;
+}
+
+.article-meta {
+    float: left;
+    color: #999;
+    padding-bottom: 15px;
+}
+
+.sidebar-body, .sidebar-title {
+    float:left;
+}
+
+.sidebaricon {
+    width: 30px;
+    margin-left: 10px;
+    margin-top: -8px;
+    margin-right:10px;
 }
 
 .bg-blog-1 {
