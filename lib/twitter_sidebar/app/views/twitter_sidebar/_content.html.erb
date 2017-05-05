@@ -13,12 +13,19 @@
            data-show-count="false">Follow @FFCPastorPaul</a>
         <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
+    <%# https://dev.twitter.com/web/embedded-timelines/parameters %>
     <div class="twitter-sidebar-body">
         <a href="https://twitter.com/FFCPastorPaul"
            class="twitter-timeline"
+           data-tweet-limit="5"
+           data-height="800"
            data-chrome="noheader nofooter">Tweets by FFCPastorPaul</a>
         <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
+    <div class="twitter-sidebar-follow" style="margin-top:15px;">
+        <a href="https://twitter.com/FFCPastorPaul" target="_blank" class="twitter-viewmore-link">Read More on Twitter</a>
+    </div>
+
 <!--
 	<%# @tclient.user_timeline(sidebar.twitter_user).first(sidebar.tweet_count.to_i).each do |tweet| %>
 		<div class="tweetdiv">

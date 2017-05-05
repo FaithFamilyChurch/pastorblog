@@ -9,6 +9,12 @@
 <head profile="http://gmpg.org/xfn/11">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= h(page_title) %></title>
+
+    <%= javascript_include_tag "/assets/jquery-3.1.1.min.js" %>
+    <%= javascript_include_tag "/assets/bootstrap.js" %>
+    <%= javascript_include_tag "/assets/fusionlib.js" %>
+    <%= javascript_include_tag "/assets/sitefunctions.js" %>
+
     <%= stylesheet_link_tag "/stylesheets/theme/bootstrap.css", :media => 'all' %>
     <%= stylesheet_link_tag "/stylesheets/theme/fusionlib.css", :media => 'all' %>
     <%= stylesheet_link_tag "/stylesheets/theme/fonts.css", :media => 'all' %>

@@ -22,28 +22,32 @@ p {
 }
 
 blockquote {
+    font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
     border-left: 7px solid #671012 !important;
     float:left;
     background-color:#efefef;
+    padding:33px 40px;
+    font-size:22px;
 }
 
 a[rel="tag"], .taglinks {
     display: inline-block;
     min-width: 10px;
     padding: 3px 7px;
-    font-size: 14px;
-    color: #ffffff;
+    font-size: 12px;
+    color: #9c9c9c;
     line-height: 1;
     vertical-align: middle;
     white-space: nowrap;
     text-align: center;
-    background-color:#918b80;
+    background-color:#ececec;
     border-radius: 3px;
     margin-left:3px;
+    margin-top:-2px;
 }
 
 .taglinks > a {
-    color:#fff;
+    color:#9c9c9c;
 }
 
 .article {
@@ -64,8 +68,18 @@ a[rel="tag"], .taglinks {
     padding-bottom: 15px;
 }
 
+.sidebar-title {
+    padding: 7px;
+    font-weight: 300;
+}
+
 .sidebar-body, .sidebar-title {
     float:left;
+}
+
+.sidebar-body > ul > li {
+    list-style-type:square;
+    padding:5px;
 }
 
 .twitter-sidebar-follow {
@@ -79,8 +93,29 @@ a[rel="tag"], .taglinks {
 
 .twitter-sidebar-body {
     max-height:800px;
-    overflow-y:scroll;
+/*     overflow-y:scroll; */
     float:left;
+}
+
+.twitter-viewmore-link {
+    display: block;
+    color: #fff;
+    background-color: #1B95E0;
+    height: 28px;
+    width: 186px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 13px;
+    margin-top: 11px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 28px;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+.twitter-viewmore-link:hover {
+    background-color:#0c7abf;
+    color:#fff;
 }
 
 .sidebaricon {
