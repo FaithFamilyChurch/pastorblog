@@ -8,7 +8,7 @@ class TwitterSidebar < Sidebar
     setting :twitter_user, 'Reuters', label: "Twitter Account to Follow"
 
     attr_accessor :twitter
-
+=begin
     def tweetbuilder
         @tweetbuilder ||= TweetBuilder.new
         @client ||= @tweetbuilder.twitter_client
@@ -23,7 +23,7 @@ class TwitterSidebar < Sidebar
     def get_tweetbuilder
         return @tweetbuilder
     end
-
+=end
 end
 
 SidebarRegistry.register_sidebar TwitterSidebar

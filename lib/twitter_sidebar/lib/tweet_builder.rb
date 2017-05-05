@@ -1,5 +1,5 @@
 class TweetBuilder
-
+=begin
     def initialize
         @twitter_client = Twitter::REST::Client.new do |config|
 			config.consumer_key        = Rails.application.secrets.twitter_consumer_key
@@ -105,4 +105,5 @@ class TweetBuilder
 		return mytweet
 
 	end
+=end
 end
