@@ -1,14 +1,11 @@
 <article id="article-<%= article.id %>" class='h-entry hentry h-as-note'>
-  <h2 class='page-header p-name entry-title'>
-      <%= (controller.controller_name == 'redirect') ? article.title : link_to_permalink(article,article.title) %>
-  </h2>
-  <div class='article-meta e-content entry-content article'>
-    <%= render 'articles/meta', article: article %>
-  </div>
-  <div class='article e-content entry-content'>
-    <%= render 'articles/protected_article_content', { :article => article } %>
-  </div>
-  <!--<div class='comments'>
-    <%#= render 'articles/comment_counter', article: article %>
-  </div>-->
+    <h2 class='page-header p-name entry-title'>
+        <%= (controller.controller_name == 'redirect') ? article.title : link_to_permalink(article,article.title) %>
+    </h2>
+    <div class='article-meta e-content entry-content article'>
+        <%= render 'articles/meta', article: article %>
+    </div>
+    <div class='article e-content entry-content'>
+        <%= render 'articles/article_excerpt', { :article => article } %>
+    </div>
 </article>
