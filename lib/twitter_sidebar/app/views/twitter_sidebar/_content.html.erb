@@ -1,10 +1,7 @@
 
-<%# sidebar.tweetbuilder %>
-<%# @tweetbld = sidebar.get_tweetbuilder %>
-<%# @tclient = sidebar.client %>
-
 <h3 class="sidebar-title"><img src="/blog/images/theme/twitter-icon.png" class="sidebaricon" /><%= sidebar.title %></h3>
 <div class="sidebar-body">
+    <% if sidebar.show_follow_button.to_s == "1" %>
     <div class="twitter-sidebar-follow">
         <a href="https://twitter.com/FFCPastorPaul"
            class="twitter-follow-button"
@@ -13,44 +10,19 @@
            data-show-count="false">Follow @FFCPastorPaul</a>
         <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
+    <% end %>
     <%# https://dev.twitter.com/web/embedded-timelines/parameters %>
     <div class="twitter-sidebar-body">
         <a href="https://twitter.com/FFCPastorPaul"
            class="twitter-timeline"
-           data-tweet-limit="5"
-           data-height="800"
+           data-tweet-limit="<%= sidebar.tweet_count %>"
+           data-height="<%= sidebar.twitter_height %>"
            data-chrome="noheader nofooter">Tweets by FFCPastorPaul</a>
         <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
+    <% if sidebar.show_read_more_button.to_s == "1" %>
     <div class="twitter-sidebar-follow" style="margin-top:15px;">
         <a href="https://twitter.com/FFCPastorPaul" target="_blank" class="twitter-viewmore-link">Read More on Twitter</a>
     </div>
-
-<!--
-	<%# @tclient.user_timeline(sidebar.twitter_user).first(sidebar.tweet_count.to_i).each do |tweet| %>
-		<div class="tweetdiv">
-			<div class="tweetheader">
-				<img class="tweeticon" src="<%#= tweet.user.profile_image_url %>" />
-				<div class="tweetnamewrapper">
-					<span class="tweetusername">
-						<a href="<%#= tweet.user.url %>" target="_blank"><%#= tweet.user.name %></a>
-					</span>
-					<span class="tweetscreenname">@<%#= tweet.user.screen_name %></span>
-				</div>
-			</div>
-			<div class="tweettext">
-				<%# @tweet = @tweetbld.get_tweet(tweet) %>
-				<%# if @tweet['images'].length > 0 %>
-					<%# @tweet['images'].each do |img| %>
-						<%#= img.html_safe %>
-					<%# end %>
-				<%# end %>
-				<div class="tweetheader bubble">
-					<span class="bubble_date"><%#= tweet.created_at.strftime("%b %d, %l:%M%P") %></span>
-					<%#= @tweet['maintext'].html_safe %>
-				</div>
-			</div>
-		</div>
-	<%# end %>
--->
+    <% end %>
 </div>

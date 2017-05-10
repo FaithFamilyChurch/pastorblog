@@ -126,8 +126,6 @@ a[rel="tag"], .taglinks {
     margin-bottom: 5px;}
 
 .twitter-sidebar-body {
-    max-height:800px;
-/*     overflow-y:scroll; */
     float:left;
 }
 
