@@ -93,9 +93,18 @@ a[rel="tag"], .taglinks {
     border-bottom: 1px solid #333;
 }
 
+.sidebar-wrapper {
+    float: left;
+    border: 1px solid #eee;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
 .sidebar-title {
-    padding: 7px;
     font-weight: 300;
+    font-size:26px;
+    padding-left: 3px;
+    margin-top: 10px;
 }
 
 .sidebar-body, .sidebar-title {
