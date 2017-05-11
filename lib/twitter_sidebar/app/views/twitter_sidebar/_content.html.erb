@@ -1,28 +1,30 @@
+<% hdr = sidebar.show_header.to_s == "0" ? "noheader" : "" %>
+<% ftr = sidebar.show_footer.to_s == "0" ? "nofooter" : "" %>
 
 <h3 class="sidebar-title"><img src="/blog/images/theme/twitter-icon.png" class="sidebaricon" /><%= sidebar.title %></h3>
 <div class="sidebar-body">
     <% if sidebar.show_follow_button.to_s == "1" %>
     <div class="twitter-sidebar-follow">
-        <a href="https://twitter.com/FFCPastorPaul"
+        <a href="https://twitter.com/<%= sidebar.twitter_user %>"
            class="twitter-follow-button"
            data-size="large"
            data-show-screen-name="true"
-           data-show-count="false">Follow @FFCPastorPaul</a>
+           data-show-count="false">Follow @<%= sidebar.twitter_user %></a>
         <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
     <% end %>
     <!--<%# https://dev.twitter.com/web/embedded-timelines/parameters %>-->
     <div class="twitter-sidebar-body">
-        <a href="https://twitter.com/FFCPastorPaul"
+        <a href="https://twitter.com/<%= sidebar.twitter_user %>"
            class="twitter-timeline"
            data-tweet-limit="<%= sidebar.tweet_count %>"
            data-height="<%= sidebar.twitter_height %>"
-           data-chrome="noheader nofooter">Tweets by FFCPastorPaul</a>
+           data-chrome="<%= hdr %> <%= ftr %>">Tweets by <%= sidebar.twitter_user %></a>
         <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
     <% if sidebar.show_read_more_button.to_s == "1" %>
     <div class="twitter-sidebar-follow" style="margin-top:15px;">
-        <a href="https://twitter.com/FFCPastorPaul" target="_blank" class="twitter-viewmore-link">Read More on Twitter</a>
+        <a href="https://twitter.com/<%= sidebar.twitter_user %>" target="_blank" class="twitter-viewmore-link">Read More on Twitter</a>
     </div>
     <% end %>
 </div>
