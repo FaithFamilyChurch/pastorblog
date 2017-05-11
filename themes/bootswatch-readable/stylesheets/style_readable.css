@@ -56,6 +56,13 @@ a[rel="tag"], .taglinks {
     color:#9c9c9c;
 }
 
+.form-control:focus {
+    border-color: #ddd;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(221, 221, 221, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(221, 221, 221, 0.6);
+}
+
 .article {
     float:left;
 }
@@ -114,6 +121,18 @@ a[rel="tag"], .taglinks {
 .sidebar-body > ul > li {
     list-style-type:square;
     padding:5px;
+}
+
+.search_input {
+    padding-right: 35px;
+}
+
+.search_submit {
+    background: none;
+    border: none;
+    position: relative;
+    left: 170px;
+    top: -31px;
 }
 
 .twitter-sidebar-follow {
