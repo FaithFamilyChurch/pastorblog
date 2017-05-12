@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%#= This little regex is all about stripping out the | character if theres nothing after it!  %>
+<!--<%#= This little regex is all about stripping out the | character if theres nothing after it!  %>//-->
 <% if /(\w+('\w+)?)(\s\w+('\w+)?)*\s+\|\s+$/.match(page_title) %>
     <% page_title.gsub!(/\s+\|\s+/, '') %>
 <% end %>

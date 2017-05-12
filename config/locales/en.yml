@@ -19,7 +19,7 @@ en:
       trackbacks_are_disabled: Trackbacks are disabled
       trackbacks_for: Trackbacks for
     search:
-      search_results_for: Search results for '%{query}'
+      search_results_for: Search results for <span class='search-query-params'>'%{query}'</span>
   comments:
     comment:
       by: by

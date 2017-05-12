@@ -1,17 +1,20 @@
-<h1><%= t('.search_results_for', query: params[:q])%></h1>
+<h2 class="search-results-header"><%= raw(t('.search_results_for', query: params[:q])) %></h2>
 
 <% @articles.each do |article| %>
-<div id="article-<%= article.id %>">
-  <h2><%= link_to_permalink(article,article.title) %></h2>
-  <p><%= article.body.strip_html.slice(0, 300) %> [...]</p>
-  <div class='author'>
-    Le <%= l(article.published_at, format: :with_spaces) %>
-  </div>
-  <div class='comments'>
-    <%= render 'articles/comment_counter', article: article %>
-  </div>
-</div>
-
+<article id="article-<%= article.id %>" class='h-entry hentry h-as-note'>
+    <h2 class='page-header p-name entry-title'>
+        <%= link_to_permalink(article,article.title) %>
+    </h2>
+    <div class='article-meta e-content entry-content article'>
+        <%= render 'articles/meta', article: article %>
+    </div>
+    <% text = strip_tags(article.html(:body)) %>
+    <div class="article-excerpt">
+        <%= text[0..300] %>...
+    </div>
+    <%= link_to_permalink article, "Read More", "", "article-read-more-link" %>
+    <!--<div class='comments'><%#= render 'articles/comment_counter', article: article %></div>-->
+</article>
 <% end %>
 
 <div id='paginate'>
