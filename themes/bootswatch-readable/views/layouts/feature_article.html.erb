@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--<%#= This little regex is all about stripping out the | character if theres nothing after it!  %>//-->
+<% if /(\w+('\w+)?)(\s\w+('\w+)?)*\s+\|\s+$/.match(page_title) %>
+    <% page_title.gsub!(/\s+\|\s+/, '') %>
+<% end %>
+
+<%= render 'shared/blog_head' %>
+
+<body>
+    <div class="bg-blog-1"></div>
+    <div class='container' id='page'>
+        <%= render 'shared/nav' %>
+        <div class="articlewrapper">
+            <div class='col-sm-12'>
+                <%= yield %>
+            </div>
+        </div>
+    </div>
+
+    <%= render 'shared/footer' %>
+</body>
+</html>

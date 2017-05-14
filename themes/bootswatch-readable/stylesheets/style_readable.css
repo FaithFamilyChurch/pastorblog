@@ -52,6 +52,24 @@ a[rel="tag"], .taglinks {
     margin-top:-2px;
 }
 
+.bg-blog-1 {
+    background: linear-gradient(to bottom, rgba(255,255,255,0), white), url('../../images/theme/mountain-bg-3.jpg');
+    background-color:#f2f0f1;
+    background-position: center 75px;
+    background-repeat:no-repeat;
+	background-size:cover;
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:900px;
+	z-index:-1;
+}
+
+.feature-span {
+    font-size:24px;
+}
+
 .taglinks > a {
     color:#9c9c9c;
 }
@@ -110,6 +128,8 @@ a[rel="tag"], .taglinks {
 
 .page-header {
     border-bottom: 1px solid #333;
+    float:left;
+    width:100%;
 }
 
 .sidebar-wrapper {
@@ -143,7 +163,7 @@ a[rel="tag"], .taglinks {
     background: none;
     border: none;
     position: relative;
-    left: 170px;
+    left: 85%;
     top: -31px;
 }
 
@@ -202,22 +222,11 @@ a[rel="tag"], .taglinks {
     margin-top: -1px !important;
 }
 
-.bg-blog-1 {
-	background: #D5D0D4 url('../../images/theme/rocky-mt-bg.jpg') center 100px no-repeat;
-	background-size:cover;
-	position:absolute;
-	top:0;
-	left:0;
-	width:100%;
-	height:1249px;
-	z-index:-1;
-}
-
 .articlewrapper {
     background-color:#fff;
     float:left;
     margin-top:50px;
-    padding:33px 56px;
+    padding:33px 0px;
 }
 
 #logo {
@@ -255,7 +264,6 @@ a[rel="tag"], .taglinks {
 
 /* Main page classes */
 #page {
-/*   background: #fff; */
   padding-bottom: 20px;
 }
 
