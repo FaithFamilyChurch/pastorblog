@@ -6,15 +6,18 @@
     <% page_title.gsub!(/\s+\|\s+/, '') %>
 <% end %>
 
+<% siteurl = "http://ffcpastor.com/" %>
+
 <%= render 'shared/blog_head' %>
 
 <body>
     <div class="bg-blog-1"></div>
     <div id='page' class='container'>
-        <%= render 'shared/nav' %>
+        <%= render 'shared/nav', siteurl: siteurl %>
         <div class="articlewrapper">
+            <!--
             <div class="page-top blog-top"></div>
-            <h3 class="header header-blog"><span>a word</span> from the pastor</h3><%#= controller.controller_name %>
+            <h3 class="header header-blog"><span>a word</span> from the pastor</h3><%#= controller.controller_name %> -->
             <div class='col-sm-8 main-column'>
                 <%= yield %>
             </div>
@@ -30,6 +33,6 @@
             <div class='span7'></div>
         </div>
     </div>-->
-    <%= render 'shared/footer' %>
+    <%= render 'shared/footer', siteurl: siteurl %>
 </body>
 </html>

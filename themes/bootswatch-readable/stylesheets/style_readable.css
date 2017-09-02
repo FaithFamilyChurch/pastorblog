@@ -159,7 +159,7 @@ a[rel="tag"], .taglinks {
 	margin-top:600px;
 }
 
-.feature .article-header-image {
+.feature .feature-image {
 	position: absolute;
 	left: 0;
 	top: 50px;
@@ -171,7 +171,7 @@ a[rel="tag"], .taglinks {
 	overflow:hidden;
 }
 
-.article-header-image:after {
+.feature-image:after {
 	content: "";
 	position: absolute;
 	top:0;
@@ -181,7 +181,7 @@ a[rel="tag"], .taglinks {
 	box-shadow: inset 0 0 1000px 0 rgba(0,0,0,.5), inset 0 0 0 5000px rgba(0,0,0,.06);
 }
 
-.feature .article-header-image img {
+.feature .feature-image img {
 	width:100%;
 	height: auto;
 }

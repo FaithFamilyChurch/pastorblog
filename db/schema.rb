@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161030121548) do
+ActiveRecord::Schema.define(version: 20170902160420) do
 
   create_table "articles_tags", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "article_id"
@@ -28,26 +28,27 @@ ActiveRecord::Schema.define(version: 20161030121548) do
     t.string   "type"
     t.string   "title"
     t.string   "author"
-    t.text     "body",           limit: 65535
-    t.text     "extended",       limit: 65535
-    t.text     "excerpt",        limit: 65535
+    t.text     "body",            limit: 65535
+    t.text     "extended",        limit: 65535
+    t.text     "excerpt",         limit: 65535
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
     t.string   "permalink"
     t.string   "guid"
     t.integer  "text_filter_id"
-    t.text     "whiteboard",     limit: 65535
+    t.text     "whiteboard",      limit: 65535
     t.string   "name"
-    t.boolean  "published",                    default: false
+    t.boolean  "published",                     default: false
     t.boolean  "allow_pings"
     t.boolean  "allow_comments"
     t.datetime "published_at"
     t.string   "state"
     t.integer  "parent_id"
-    t.text     "settings",       limit: 65535
-    t.string   "post_type",                    default: "read"
-    t.integer  "blog_id",                                       null: false
+    t.text     "settings",        limit: 65535
+    t.string   "post_type",                     default: "read"
+    t.integer  "blog_id",                                        null: false
+    t.text     "backgroundimage", limit: 65535
     t.index ["id", "type"], name: "index_contents_on_id_and_type", using: :btree
     t.index ["published"], name: "index_contents_on_published", using: :btree
     t.index ["text_filter_id"], name: "index_contents_on_text_filter_id", using: :btree
