@@ -12,8 +12,9 @@
     <body class="feature">
         <% if @article.backgroundimage != "" %>
             <img src="<%= @article.backgroundimage %>" class="feature-image" />
+        <% else %>
+            <div class="bg-blog-1"></div>
         <% end %>
-<!--        <div class="bg-blog-1"></div>//-->
         <div class='container' id='page'>
             <%= render 'shared/nav', siteurl: siteurl %>
             <div class="articlewrapper">
