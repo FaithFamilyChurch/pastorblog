@@ -446,7 +446,7 @@ a[rel="tag"], .taglinks {
 
 .footerdivcontent .titlelink {
     padding: 6px 22px !important;
-    color: #eadde7;
+    color: #929292;
     margin-top: 15px;
 }
 
@@ -492,7 +492,7 @@ a[rel="tag"], .taglinks {
     background-color: #72736a;
     font-size: 18px;
     font-weight: 800;
-    box-shadow: -4px 4px 9px 0 rgba(0,0,0,.25);
+/*     box-shadow: -4px 4px 9px 0 rgba(0,0,0,.25); */
     transition: background-color .1s ease-out;
     border-top: 1px solid #72736a;
     border-bottom: 1px solid #72736a;
@@ -528,44 +528,7 @@ a[rel="tag"], .taglinks {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Main page classes */
-#page {
-/*   padding-bottom: 20px; */
-}
-
-/*#page img {
-    background: #ddd;
-    border: 1px solid #DDDDDD;
-    border-radius: 6px;
-    line-height: 1;
-    padding: 4px;
-    display: block;
-    max-width: 100%;
-    height: auto;
-}*/
-
-.status {
+/*.status {
   margin-top: 30px;
 }
 
@@ -584,4 +547,4 @@ a[rel="tag"], .taglinks {
 
 #sidebar {
   padding-top: 24px;
-}
+}*/

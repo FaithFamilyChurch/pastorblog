@@ -15,9 +15,11 @@
     <div id='page' class='container'>
         <%= render 'shared/nav', siteurl: siteurl %>
         <div class="articlewrapper">
-            <!--
+        <% if !@articles.nil? %>
             <div class="page-top blog-top"></div>
-            <h3 class="header header-blog"><span>a word</span> from the pastor</h3><%#= controller.controller_name %> -->
+            <h3 class="header header-blog"><span>a word</span> from the pastor</h3>
+        <% end %>
+            <%#= controller.controller_name %>
             <div class='col-sm-8 main-column'>
                 <%= yield %>
             </div>
