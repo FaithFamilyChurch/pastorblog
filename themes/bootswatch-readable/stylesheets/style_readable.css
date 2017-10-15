@@ -43,6 +43,7 @@ blockquote {
     background-color:#efefef;
     padding:33px 40px;
     font-size:22px;
+    margin: 20px 0 30px;
 }
 
 a[rel="tag"], .taglinks {
@@ -60,6 +61,7 @@ a[rel="tag"], .taglinks {
     margin-left:3px;
     margin-top:-2px;
 }
+
 
 .bg-blog-1 {
     background: url('../../images/theme/mountain-bg-3.jpg');
@@ -157,6 +159,7 @@ a[rel="tag"], .taglinks {
 
 .feature .articlewrapper {
 	margin-top:600px;
+    padding-bottom:100px;
 }
 
 .feature .feature-image {

@@ -1,9 +1,9 @@
 <article id="article-<%= article.id %>" class='h-entry hentry h-as-note'>
     <h2 class='page-header p-name entry-title'>
-        <%= (controller.controller_name == 'redirect') ? article.title : link_to_permalink(article,article.title) %>
         <% if article.post_type == "feature-article" %>
             <%= render 'shared/feature_glyph_span' %>
         <% end %>
+        <%= (controller.controller_name == 'redirect') ? article.title : link_to_permalink(article,article.title) %>
     </h2>
     <div class='article-meta e-content entry-content article'>
         <%= render 'articles/meta', article: article %>
