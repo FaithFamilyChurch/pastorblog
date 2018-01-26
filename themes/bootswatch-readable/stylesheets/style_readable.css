@@ -199,6 +199,8 @@ a[rel="tag"], .taglinks {
 	padding-top: 10px !important;
 }
 
+.article.entry-content p img {margin-bottom: 22px}
+
 .blog-sidebar.article {
 	padding-top: 0 !important;
 	margin-top: -14px;
@@ -483,6 +485,7 @@ a[rel="tag"], .taglinks {
     border-left: 1px solid transparent;
     border-top: 1px solid transparent;
     border-bottom: 1px solid transparent;
+    margin-right:-5px;
 }
 
 .footer-contact-form input:focus {

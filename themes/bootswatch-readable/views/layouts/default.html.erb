@@ -36,5 +36,42 @@
         </div>
     </div>-->
     <%= render 'shared/footer', siteurl: siteurl %>
+            <!-- Modal -->
+        <div class="modal fade" id="subscription_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                    <form id="subscription_form">
+                        <button id="close_button" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <div class="header_div form-group">
+                            Download this free e-book to discover ten of the most significant<br>
+                            chapters of the Bible that every Christian should know and love
+                        </div>
+                        <div class="form-group">
+                            <label for="subscribe_email">Email address</label>
+                            <input type="email" class="form-control" name="subscribe_email" id="subscribe_email" placeholder="Email Address">
+                        </div>
+                        <div class="form-group">
+                            <label for="subscribe_fname">First Name</label>
+                            <input type="text" class="form-control" name="subscribe_fname" id="subscribe_fname" placeholder="First Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="subscribe_lname">Last Name</label>
+                            <input type="text" class="form-control" name="subscribe_lname" id="subscribe_lname" placeholder="Last Name">
+                        </div>
+                    </form>
+                    </div>
+                    <div class="modal-footer">
+                        <span>
+                            You'll also receive weekly emails to encourage and equip you in your Christian walk.
+                            If you change your mind, you can unsubscribe at any time.
+                        </span>
+                        <button type="button" id="subscribe_button" onclick="sendSubscriptionRequest()" class="btn btn-default">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 </body>
 </html>
