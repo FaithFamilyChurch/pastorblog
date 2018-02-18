@@ -12,6 +12,8 @@ module Publify
         # Application configuration should go into files in config/initializers
         # -- all .rb files in that directory are automatically loaded.
 
+        config.site_url = "pastorandrews.org"
+
         config.relative_url_root = "/blog"
         config.action_controller.relative_url_root = "/blog"
 
