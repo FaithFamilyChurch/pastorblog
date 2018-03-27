@@ -2,6 +2,10 @@ html, body {
     background: #f4f4f4;
 }
 
+figcaption {
+    display:none;
+}
+
 .container {
 	z-index: 1;
 	position: relative;
