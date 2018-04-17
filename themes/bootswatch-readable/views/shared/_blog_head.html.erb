@@ -2,6 +2,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=.7, maximum-scale=1">
 <!--    <meta name="viewport" content="width=555, initial-scale=1.0">//-->
     <title><%= h(page_title) %></title>
+    <%= javascript_include_tag 'application', src="https://www.googletagmanager.com/gtag/js?id=UA-117403746-1", async: true %>
+    <%= javascript_tag do %>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-117403746-1');
+    <% end %>
 
     <%= javascript_include_tag "/assets/jquery-3.1.1.min.js" %>
     <%= javascript_include_tag "/assets/bootstrap.js" %>
