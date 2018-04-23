@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180330131250) do
+ActiveRecord::Schema.define(version: 20180422144347) do
 
   create_table "articles_tags", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "article_id"
@@ -101,6 +101,7 @@ ActiveRecord::Schema.define(version: 20180330131250) do
     t.string   "pick_length"
     t.datetime "created_at",                   null: false
     t.datetime "updated_at",                   null: false
+    t.text     "image_link",     limit: 65535
   end
 
   create_table "pings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
