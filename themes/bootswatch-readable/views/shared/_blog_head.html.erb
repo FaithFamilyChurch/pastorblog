@@ -2,7 +2,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=.7, maximum-scale=1">
 <!--    <meta name="viewport" content="width=555, initial-scale=1.0">//-->
     <title><%= h(page_title) %></title>
-
+    <%= favicon_link_tag asset_path('images/theme/favicon.png'), :rel => 'icon', :type =>  'image/png' %>
     <%= javascript_include_tag 'application', src="https://www.googletagmanager.com/gtag/js?id=UA-117403746-1", async: true %>
     <%= javascript_tag do %>
         window.dataLayer = window.dataLayer || [];
