@@ -49,10 +49,14 @@ blockquote {
     font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
     border-left: 7px solid #671012 !important;
     float:left;
-    background-color:#efefef;
+    background-color:#fff;
     padding:33px 40px;
     font-size:22px;
     margin: 20px 0 30px;
+}
+
+.rtBibleRef {
+    border-bottom: 1px dotted;
 }
 
 a[rel="tag"], .taglinks {
