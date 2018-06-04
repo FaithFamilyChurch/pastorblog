@@ -1,14 +1,20 @@
-<article id="article-<%= article.id %>" class='h-entry hentry h-as-note'>
-    <h2 class='page-header p-name entry-title'>
+
+<% @oArticleData = @aArticles[article.id] %>
+
+<article id="article-<%= article.id %>" class='h-entry hentry h-as-note' style="margin-bottom:40px;padding-bottom:40px;">
+    <a href="<%= @oArticleData['link'] %>" style="width:150px;display:block;float:left;">
+        <div class="article_image_div" style="background:url('/blog/files/resource/<%= @oArticleData['image_id'] %>/<%= @oArticleData['image_name'] %>');background-size:cover;background-position:center;"></div>
+    </a>
+    <h4 class='page-header p-name entry-title' style="font-weight: 600;float: left;width: calc(100% - 175px);margin: 0px 0px 0px 20px;border-bottom:none;">
         <% if article.post_type == "feature-article" %>
             <%= render 'shared/feature_glyph_span' %>
         <% end %>
         <%= (controller.controller_name == 'redirect') ? article.title : link_to_permalink(article,article.title) %>
-    </h2>
-    <div class='article-meta e-content entry-content article'>
+    </h4>
+    <div class='article-meta e-content entry-content article' style="margin-left:20px;padding-bottom:0px;">
         <%= render 'articles/meta', article: article %>
     </div>
-    <div class='article e-content entry-content'>
-        <%= render 'articles/article_excerpt', { :article => article } %>
+    <div class='article e-content entry-content' style="float: left;width: calc(100% - 175px);margin: 0px 0px 0px 20px;font-size: 14px;font-family:'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif">
+        <%= @oArticleData['text'] %>
     </div>
 </article>

@@ -30,6 +30,12 @@ p {
     line-height:35px;
 }
 
+.entry-share-div {
+    width:100%;
+    margin-bottom:20px;
+    margin-top:-20px;
+}
+
 article {
     float:left;
     border-bottom: 1px solid #ddd;
