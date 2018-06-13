@@ -36,6 +36,12 @@ p {
     margin-top:-20px;
 }
 
+.entry-share-div > div {
+    display: inline-block;
+    float: left;
+    padding: 5px 10px 5px 10px;
+}
+
 article {
     float:left;
     border-bottom: 1px solid #ddd;
@@ -218,7 +224,9 @@ a[rel="tag"], .taglinks {
 	padding-top: 10px !important;
 }
 
-.article.entry-content p img {margin-bottom: 22px}
+.article.entry-content p {width:100%;}
+
+.article.entry-content p img {margin-bottom: 22px;width:100%;}
 
 .blog-sidebar.article {
 	padding-top: 0 !important;
