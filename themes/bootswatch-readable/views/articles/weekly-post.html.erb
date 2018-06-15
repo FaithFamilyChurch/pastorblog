@@ -11,14 +11,14 @@
     }(document, 'script', 'facebook-jssdk'));
 <% end %>
 
-<% @articleLink = link_to_permalink(@article, @article.title) %>
-
-<% link = Nokogiri::HTML(@articleLink) %>
-<% atag = link.xpath('//a/@href') %>
-<% link_array = atag.map {|attr| attr.value} %>
-<% final_link = link_array[0] %>
-<% enc_link = URI.escape(final_link) %>
-
+<%
+    @articleLink = link_to_permalink(@article, @article.title)
+    link = Nokogiri::HTML(@articleLink)
+    atag = link.xpath('//a/@href')
+    link_array = atag.map {|attr| attr.value}
+    final_link = link_array[0]
+    enc_link = URI.escape(final_link)
+%>
 
 <div class="article" id="article-<%= @article.id %>">
     <h2 class='page-header p-name entry-title'>
@@ -27,7 +27,6 @@
     <div class='article-meta e-content entry-content article'>
         <%= render 'articles/meta_tags', article: @article %>
     </div>
-    <!-- -->
     <div class="article entry-share-div"
          style="padding: 5px 0 0 0;text-align: center;margin-top: -35px;transform: scale(0.71);margin-bottom: 0px;transform-origin: left;">
         <div style="padding-left:5px;">
@@ -56,7 +55,6 @@
             <a href="mailto:?subject=Check%20out%20the%20latest%20blog%20from%20Pastor%20Andrews&body=<%= final_link %>" class="glyphicon glyphicon-envelope" style="color: #483D3F;font-size: 30px;"></a>
         </div>
     </div>
-    <!-- -->
     <div class='article e-content entry-content'>
         <%= render 'articles/protected_article_content', { article: @article } %>
     </div>
