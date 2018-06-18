@@ -88,6 +88,44 @@ a[rel="tag"], .taglinks {
 }
 
 
+nav.pagination span {
+    text-align: center;
+    display: inline-block;
+    background: rgb(200,200,200,.5);
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 800;
+}
+
+nav.pagination {
+    width:100%;
+    text-align:center;
+}
+
+nav.pagination span.first {
+    width: 80px;
+}
+
+nav.pagination span.prev {
+    width: 80px;
+}
+
+nav.pagination span.next {
+    width: 80px;
+}
+
+nav.pagination span.last {
+    width: 80px;
+}
+
+nav.pagination a {
+    display: inline-block;
+    width: calc(100% - 10px);
+}
+
 .bg-blog-1 {
     background: url('../../images/theme/mountain-bg-3.jpg');
 	background-color:#f2f0f1;

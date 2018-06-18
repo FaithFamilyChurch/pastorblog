@@ -15,6 +15,6 @@
         <%= render 'articles/meta', article: article %>
     </div>
     <div class='article e-content entry-content' style="float: left;width: calc(100% - 175px);margin: 0px 0px 0px 20px;font-size: 14px;font-family:'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif">
-        <%= @oArticleData['text'] %>
+        <%= @oArticleData['text'].html_safe %>
     </div>
 </article>
