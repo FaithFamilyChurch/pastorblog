@@ -11,6 +11,36 @@
     }(document, 'script', 'facebook-jssdk'));
 <% end %>
 
+<%= javascript_tag do %>
+    //$(document).on('turbolinks:load',
+    $(window).bind("load", function() {
+    var refTagger = {
+        settings: {
+            bibleVersion: "ESV",
+            socialSharing: ["twitter","facebook"],
+            customStyle : {
+                heading: {
+                    backgroundColor : "#483d3f",
+                    color : "#ffffff"
+                    },
+                body   : {
+                    color : "#333333",
+                    moreLink : {
+                        color: "#432630"
+                    }
+                }
+            }
+        }
+    };
+    (function(d, t) {
+        console.log("loading reftagger...");
+        var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
+        g.src = "//api.reftagger.com/v2/RefTagger.js";
+        s.parentNode.insertBefore(g, s);
+    }(document, "script"));
+    });
+<% end %>
+
 <%
     @articleLink = link_to_permalink(@article, @article.title)
     link = Nokogiri::HTML(@articleLink)

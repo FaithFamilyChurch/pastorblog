@@ -93,11 +93,12 @@ nav.pagination span {
     display: inline-block;
     background: rgb(200,200,200,.5);
     border-radius: 20px;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
     font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 800;
+    font-size:14px;
 }
 
 nav.pagination {
@@ -106,19 +107,19 @@ nav.pagination {
 }
 
 nav.pagination span.first {
-    width: 80px;
+    width: 60px;
 }
 
 nav.pagination span.prev {
-    width: 80px;
+    width: 60px;
 }
 
 nav.pagination span.next {
-    width: 80px;
+    width: 60px;
 }
 
 nav.pagination span.last {
-    width: 80px;
+    width: 60px;
 }
 
 nav.pagination a {

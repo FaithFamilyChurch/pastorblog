@@ -3,45 +3,9 @@
 <!--    <meta name="viewport" content="width=555, initial-scale=1.0">//-->
     <title><%= h(page_title) %></title>
     <%= favicon_link_tag asset_path('images/theme/favicon.png'), :rel => 'icon', :type =>  'image/png' %>
-    <%= javascript_include_tag 'application', src="https://www.googletagmanager.com/gtag/js?id=UA-117403746-1", async: true %>
-    <%= javascript_tag do %>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-117403746-1');
-    <% end %>
-
-    <%= javascript_tag do %>
-        //$(document).on('turbolinks:load',
-    	var refTagger = {
-	    	settings: {
-		    	bibleVersion: "ESV",
-			    socialSharing: ["twitter","facebook"],
-    			customStyle : {
-	    			heading: {
-		    			backgroundColor : "#483d3f",
-			    		color : "#ffffff"
-    				    },
-	    			body   : {
-		    			color : "#333333",
-			    		moreLink : {
-				    		color: "#432630"
-					    }
-    				}
-	    		}
-		    }
-    	};
-	    (function(d, t) {
-            console.log("loading reftagger...");
-		    var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
-    		g.src = "//api.reftagger.com/v2/RefTagger.js";
-	    	s.parentNode.insertBefore(g, s);
-	    }(document, "script"));
-        //);
-    <% end %>
 
     <%= javascript_include_tag "/assets/jquery-3.1.1.min.js" %>
+    <%= javascript_include_tag "/assets/jquery.timeago.js" %>
     <%= javascript_include_tag "/assets/bootstrap.js" %>
     <%= javascript_include_tag "/assets/fusionlib.js" %>
     <%= javascript_include_tag "/assets/sitefunctions.js" %>
@@ -49,6 +13,14 @@
     <%= javascript_include_tag 'application', src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js", 'data-dojo-config': "usePlainJson: true, isDebug: false" %>
     <%= javascript_tag do %>
         require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us14.list-manage.com","uuid":"f7ddb03f7d21bc8291d3bab3f","lid":"a3914eb759"}) })
+    <% end %>
+    <%= javascript_include_tag 'application', src="https://www.googletagmanager.com/gtag/js?id=UA-117403746-1", async: true %>
+    <%= javascript_tag do %>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-117403746-1');
     <% end %>
 
     <%= stylesheet_link_tag "/stylesheets/theme/bootstrap.css", :media => 'all' %>
